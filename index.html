@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدولة السعودية الأولى: بعض معارك الدفاع (1226-1233هـ)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #FDFBF7;
+            color: #1E293B;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            height: 320px;
+            max-height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .tab-btn.active {
+            background-color: #9A3412;
+            color: #FFFFFF;
+            border-color: #9A3412;
+        }
+        .matching-item.selected {
+            border-color: #9A3412;
+            background-color: #FFEDD5;
+            transform: scale(1.02);
+        }
+        .matching-item.matched {
+            border-color: #166534;
+            background-color: #DCFCE7;
+            pointer-events: none;
+            opacity: 0.85;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-stone-900 text-amber-50 shadow-md sticky top-0 z-50 border-b border-amber-800/40">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🛡️</span>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold text-amber-400">الدولة السعودية الأولى</h1>
+                    <p class="text-xs text-stone-300">بعض معارك الدفاع (1226 - 1233هـ) • مادة التاريخ - الصف الثاني الثانوي</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex flex-wrap justify-center gap-2">
+                <button onclick="switchTab('slides')" id="tab-slides" class="tab-btn active px-4 py-2 rounded-lg text-sm font-bold border border-stone-700 transition duration-200">
+                    🖥️ العرض التقديمي (الشرائح)
+                </button>
+                <button onclick="switchTab('dashboard')" id="tab-dashboard" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold border border-stone-700 transition duration-200">
+                    🗺️ الخريطة والتحليل الزمني
+                </button>
+                <button onclick="switchTab('worksheet')" id="tab-worksheet" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold border border-stone-700 transition duration-200">
+                    📝 ورقة العمل
+                </button>
+                <button onclick="switchTab('challenge')" id="tab-challenge" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold border border-stone-700 transition duration-200">
+                    🎯 التحدي الختامي
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full">
+
+        <!-- Custom Notification Alert Box -->
+        <div id="custom-alert" class="hidden fixed top-20 left-1/2 transform -translate-x-1/2 z-50 bg-stone-900 text-white px-6 py-3 rounded-xl shadow-2xl border-2 border-amber-500 text-sm font-bold flex items-center gap-3 transition-all duration-300">
+            <span id="alert-icon">ℹ️</span>
+            <span id="alert-text">رسالة تنبيهية</span>
+        </div>
+
+        <!-- SECTION 1: PRESENTATION SLIDES DECK -->
+        <section id="section-slides" class="space-y-6">
+            <div class="bg-amber-100/60 border-r-4 border-amber-800 p-4 rounded-l-lg mb-6">
+                <h2 class="font-bold text-amber-900 text-lg flex items-center gap-2">
+                    <span>📚</span> العرض التقديمي التفاعلي للمعارك التاريخية
+                </h2>
+                <p class="text-sm text-stone-700 mt-1 leading-relaxed">
+                    يعرض هذا القسم عشر شرائح تفاعلية مخصصة لكل معركة دفاعية خاضها أبطال الدولة السعودية الأولى بين عامي 1226هـ و1233هـ، مع إبراز القادة، الخطة الحربية، الموقع، مقطع الفيديو التوضيحي في الشريحة الأولى، والنتائج التاريخية المستمدة كلياً من المنهج.
+                </p>
+            </div>
+
+            <!-- Slide View Wrapper -->
+            <div class="bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden">
+                <!-- Slide Header Banner -->
+                <div class="bg-stone-800 text-white px-6 py-4 flex flex-wrap justify-between items-center gap-4 border-b border-amber-700">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-amber-600 text-white text-xs font-black px-3 py-1 rounded-full" id="slide-number">شريحة 1 من 10</span>
+                        <span class="text-stone-300 text-xs font-bold" id="slide-year-badge">1226هـ</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="prevSlide()" class="bg-stone-700 hover:bg-stone-600 text-white px-4 py-1.5 rounded-lg text-sm font-bold transition">السابقة ➡️</button>
+                        <button onclick="nextSlide()" class="bg-amber-700 hover:bg-amber-600 text-white px-4 py-1.5 rounded-lg text-sm font-bold transition">التالية ⬅️</button>
+                    </div>
+                </div>
+
+                <!-- Slide Body Dynamic Content -->
+                <div class="p-6 md:p-8" id="slide-content">
+                    <!-- Injected by JavaScript -->
+                </div>
+
+                <!-- Slide Thumbnails Indicator -->
+                <div class="bg-stone-50 px-6 py-4 border-t border-stone-200 flex flex-wrap justify-center gap-2" id="slides-dots">
+                    <!-- Dots Injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TIMELINE & ANALYTICS DASHBOARD -->
+        <section id="section-dashboard" class="hidden space-y-8">
+            <div class="bg-amber-100/60 border-r-4 border-amber-800 p-4 rounded-l-lg">
+                <h2 class="font-bold text-amber-900 text-lg flex items-center gap-2">
+                    <span>🗺️</span> لوحة التحليل الزمني وتوثيق البطولات الوطنية
+                </h2>
+                <p class="text-sm text-stone-700 mt-1 leading-relaxed">
+                    تحليل شامل للمسار الزمني لمعارك الدفاع عن الدولة السعودية الأولى خلال أكثر من 8 سنوات بدأت عام 1226هـ، مستعرضة توزيع المعارك وأحداث الاستبسال الوطني.
+                </p>
+            </div>
+
+            <!-- Grid Layout for Chart & Stats -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Chart Container Box -->
+                <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-md border border-stone-200 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-stone-800 text-base mb-1 flex items-center gap-2">
+                            <span>📊</span> التوزيع الزمني لمعارك الدفاع (1226 - 1233هـ)
+                        </h3>
+                        <p class="text-xs text-stone-500 mb-4">بيان توضيحي لعدد المعارك ومحطات المقاومة الوطنية الباسلة عبر السنوات</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="battlesChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Quick Historical Summary Stats -->
+                <div class="bg-stone-900 text-white p-6 rounded-2xl shadow-md flex flex-col justify-between space-y-4 border-t-4 border-amber-600">
+                    <div>
+                        <h3 class="text-lg font-bold text-amber-400 mb-2 flex items-center gap-2">
+                            <span>📜</span> حقائق المعارك من الكتاب
+                        </h3>
+                        <hr class="border-stone-700 mb-4">
+                        <ul class="space-y-3 text-sm text-stone-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-500 font-bold">⏱️</span>
+                                <span>استغرقت حملات المعتدين أكثر من <strong>8 سنوات</strong> بدأت في عام 1226هـ.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-500 font-bold">⚔️</span>
+                                <span>تضمن العدوان <strong>عشرات الحملات ومئات الألوف</strong> من المقاتلين ومئات المدافع.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-500 font-bold">🏰</span>
+                                <span>شملت المعارك الحجاز، عسير، نجد، والقصيم في صور استبسال عظيمة.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-500 font-bold">👑</span>
+                                <span>قاد الدفاع أئمة الدولة وأمراؤها وأبطال ومواطنون من النساء والرجال (مثل غالية البقمية، بخروش، وطامي).</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-stone-800 p-4 rounded-xl border border-stone-700 text-xs text-amber-200">
+                        💡 <strong>ملاحظة المنهج:</strong> وقف السعوديون موقفاً صلباً للدفاع عن دولتهم رجالاً ونساءً، وعن مبادئهم وقيادتهم التي قدمت لهم الاستقرار والوحدة والازدهار.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Searchable Battle Cards List -->
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-stone-200">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6">
+                    <h3 class="font-bold text-stone-800 text-lg flex items-center gap-2">
+                        <span>🔍</span> استكشاف المعارك والتصفية حسب العام
+                    </h3>
+                    <div class="flex gap-2">
+                        <select id="year-filter" onchange="filterBattles()" class="bg-stone-100 border border-stone-300 rounded-lg px-3 py-1.5 text-sm font-bold text-stone-700">
+                            <option value="all">جميع الأعوام (1226-1233هـ)</option>
+                            <option value="1226">1226هـ</option>
+                            <option value="1227">1227هـ</option>
+                            <option value="1228">1228هـ</option>
+                            <option value="1229">1229هـ</option>
+                            <option value="1230">1230هـ</option>
+                            <option value="1232">1232هـ</option>
+                            <option value="1233">1233هـ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="battles-grid">
+                    <!-- Dynamic Battle Mini Cards Injected Here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WORKSHEET -->
+        <section id="section-worksheet" class="hidden space-y-6">
+            <div class="bg-amber-100/60 border-r-4 border-amber-800 p-4 rounded-l-lg">
+                <h2 class="font-bold text-amber-900 text-lg flex items-center gap-2">
+                    <span>📝</span> ورقة العمل التفاعلية المقيمة
+                </h2>
+                <p class="text-sm text-stone-700 mt-1 leading-relaxed">
+                    تستهدف ورقة العمل التثبت من استيعاب الطالب للقادة والنتائج الرئيسية للمعارك المدرجة في المنهج. أجب عن الأسئلة ثم اضغط "تصحيح ورقة العمل"، أو انقر على <strong>"توليد أسئلة جديدة"</strong> لبناء نموذج جديد فوراً من المنهج المقرر.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-stone-200 space-y-8">
+                <!-- Worksheet Header Details -->
+                <div class="border-b border-stone-200 pb-4 flex flex-wrap justify-between items-center gap-4 bg-stone-50 p-4 rounded-xl">
+                    <div>
+                        <p class="font-bold text-stone-800">المادة: تاريخ المملكة العربية السعودية (الصف الثاني الثانوي)</p>
+                        <p class="text-xs text-stone-600">الموضوع: بعض معارك الدفاع (1226-1233هـ)</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span id="worksheet-set-badge" class="bg-amber-800 text-white text-xs px-3 py-1 rounded-full font-bold">النموذج (1)</span>
+                        <button type="button" onclick="generateNewWorksheet()" class="bg-amber-700 hover:bg-amber-800 text-white font-bold px-3.5 py-1.5 rounded-lg text-xs shadow transition flex items-center gap-1.5">
+                            <span>🔄</span> توليد أسئلة جديدة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Worksheet Questions Form Container -->
+                <form id="worksheet-form" onsubmit="evaluateWorksheet(event)" class="space-y-6">
+                    <div id="worksheet-questions-container" class="space-y-6">
+                        <!-- Questions dynamically generated by JavaScript -->
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-stone-200">
+                        <button type="submit" class="bg-amber-800 hover:bg-amber-900 text-white font-bold px-6 py-2.5 rounded-xl shadow-lg transition duration-200 flex items-center gap-2">
+                            <span>✅</span> تصحيح ورقة العمل
+                        </button>
+                        <button type="button" onclick="toggleAnswerKey()" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-bold px-4 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
+                            <span>🔑</span> إظهار / إخفاء مفتاح الإجابة (للمعلم)
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Worksheet Result Box -->
+                <div id="worksheet-result" class="hidden p-4 rounded-xl border font-bold text-sm"></div>
+
+                <!-- Hidden Answer Key for Teacher -->
+                <div id="teacher-answer-key" class="hidden bg-emerald-50 border-2 border-emerald-600 p-5 rounded-xl space-y-3">
+                    <h4 class="font-bold text-emerald-900 text-base flex items-center gap-2">
+                        <span>💡</span> مفتاح الإجابة النموذجي (خاص بالمعلم):
+                    </h4>
+                    <div id="answer-key-content" class="text-sm text-emerald-950 space-y-1.5">
+                        <!-- Filled dynamically -->
+                    </div>
+                    <p class="text-xs text-emerald-800 pt-2 border-t border-emerald-200 italic">
+                        📌 <strong>ملاحظة للمعلم:</strong> إذا كنت ترغب في أسئلة مختلفة، فقط اضغط على زر (توليد أسئلة جديدة) وسيقوم النظام فوراً بإنشاء 3 أسئلة جديدة كلياً من نفس المنهج.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: GAMIFIED CHALLENGE -->
+        <section id="section-challenge" class="hidden space-y-6">
+            <div class="bg-amber-100/60 border-r-4 border-amber-800 p-4 rounded-l-lg">
+                <h2 class="font-bold text-amber-900 text-lg flex items-center gap-2">
+                    <span>🎯</span> التحدي الختامي (التقويم التفاعلي الحماسي)
+                </h2>
+                <p class="text-sm text-stone-700 mt-1 leading-relaxed">
+                    مسابقة تقويمية تفاعلية بأسئلة اختيار من متعدد، ومطابقة، وربط نتائج المعارك. أمامك <strong>30 ثانية</strong> لإتمام التحدي! يمكنك توليد جولة جديدة بأسئلة مختلفة تماماً من المنهج في أي وقت.
+                </p>
+            </div>
+
+            <!-- Challenge Dashboard Header -->
+            <div class="bg-stone-900 text-white p-6 rounded-2xl shadow-xl flex flex-wrap justify-between items-center gap-4 border-t-4 border-amber-500">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl">⏱️</span>
+                    <div>
+                        <p class="text-xs text-stone-400">الوقت المتبقي للجولة</p>
+                        <div class="flex items-center gap-2">
+                            <span id="challenge-timer" class="text-3xl font-black text-amber-400">30</span>
+                            <span class="text-xs text-stone-300">ثانية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="text-center px-4 py-2 bg-stone-800 rounded-xl border border-stone-700">
+                        <p class="text-xs text-stone-400">النتيجة الحالية</p>
+                        <p id="challenge-score" class="text-xl font-black text-emerald-400">0 / 3</p>
+                    </div>
+                    <button onclick="generateNewChallenge()" class="bg-amber-600 hover:bg-amber-500 text-white font-bold px-4 py-2.5 rounded-xl text-sm shadow transition flex items-center gap-2">
+                        <span>🔄</span> جولة جديدة (توليد أسئلة)
+                    </button>
+                    <button onclick="resetCurrentRound()" class="bg-stone-700 hover:bg-stone-600 text-stone-200 font-bold px-3 py-2.5 rounded-xl text-sm transition">
+                        إعادة الجولة
+                    </button>
+                </div>
+            </div>
+
+            <!-- Challenge Area Container -->
+            <div id="challenge-container" class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-stone-200 space-y-8">
+                <!-- Part 1: Multiple Choice Question -->
+                <div class="space-y-4">
+                    <h3 class="font-bold text-stone-800 text-base flex items-center gap-2">
+                        <span class="bg-amber-800 text-white text-xs px-2.5 py-1 rounded-full">1</span>
+                        <span id="challenge-mcq-title">سؤال الاختيار من متعدد:</span>
+                    </h3>
+                    <p id="challenge-mcq-question" class="text-stone-700 font-semibold text-sm">--</p>
+                    <div id="challenge-mcq-options" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+
+                <hr class="border-stone-200">
+
+                <!-- Part 2: Interactive Matching Activity -->
+                <div class="space-y-4">
+                    <h3 class="font-bold text-stone-800 text-base flex items-center gap-2">
+                        <span class="bg-amber-800 text-white text-xs px-2.5 py-1 rounded-full">2</span>
+                        <span>سؤال المطابقة: صِل بين البطل السعودي والمعركة/الموقع المرتبط به</span>
+                    </h3>
+                    <p class="text-xs text-stone-500">انقر على اسم البطل أولاً ثم انقر على الموقع المقابل له لإتمام التوصيل</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="space-y-2" id="matching-heroes-col">
+                            <!-- Hero buttons injected by JS -->
+                        </div>
+                        <div class="space-y-2" id="matching-targets-col">
+                            <!-- Target buttons injected by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-stone-200">
+
+                <!-- Part 3: Battle Outcome Placement -->
+                <div class="space-y-4">
+                    <h3 class="font-bold text-stone-800 text-base flex items-center gap-2">
+                        <span class="bg-amber-800 text-white text-xs px-2.5 py-1 rounded-full">3</span>
+                        <span>سؤال تحديد النتائج: اختر النتيجة أو الحدث المناسب لكل معركة</span>
+                    </h3>
+                    <div id="challenge-outcomes-container" class="space-y-3">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Final Evaluation Button -->
+                <div class="pt-4 border-t border-stone-200 flex flex-wrap items-center justify-between gap-4">
+                    <button onclick="submitChallengeAnswers()" id="submit-challenge-btn" class="bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-8 py-3 rounded-xl shadow-lg transition duration-200 flex items-center gap-2">
+                        <span>🎯</span> تسليم إجابات التحدي
+                    </button>
+                    <div id="challenge-status-banner" class="text-sm font-bold text-stone-700"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 text-center py-4 border-t border-stone-800 text-xs mt-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>محتوى تعليمي تفاعلي مستخلص بدقة من مقرر تاريخ المرحلة الثانوية (مسار العلوم الإنسانية) • وزارة التعليم بالمملكة العربية السعودية</p>
+        </div>
+    </footer>
+
+    <script>
+        // Core Battles Dataset strictly extracted from the textbook PDF
+        const battlesData = [
+            {
+                id: 1,
+                title: "معركة وادي الصفراء",
+                year: "1226هـ",
+                yearNum: 1226,
+                saudiLeaders: "الأمير عبد الله بن سعود (بتكليف من والده الإمام سعود بن عبد العزيز)، ومعه الأمير فيصل بن سعود، مسعود بن مضيان، وحباب المطيري.",
+                enemyLeaders: "طوسون (قوات الدولة العثمانية المعتدية).",
+                location: "وادي الصفراء بالقرب من المدينة المنورة (مضيق وادي جديدة).",
+                hasVideo: true,
+                videoUrl: "https://youtu.be/btG2usijDhw?si=RqBGdTFok6oWbNg_", // رابط يوتيوب قابل للتغيير
+                plan: "وضع الإمام عبد الله بن سعود خطة حربية محكمة؛ حيث قسّم قواته إلى قسمين: قسم في الوادي وقسم في قمم الجبال المحيطة، وحفر خندقاً في مضيق وادي جديدة.",
+                events: "عندما قدم طوسون بالقوات المعتدية وعبر ممر وادي جديدة واجهته نيران كثيفة من القوات السعودية في الخندق. وجّه طوسون جزءاً كبيراً من قواته للصعود إلى الجبال لإسكات النيران، فاستقبلتهم القوات السعودية المرابطة بالجبال وحصدتهم.",
+                result: "دب الخوف والهزيمة في قوات طوسون، وفر ما تبقى منهم منهزمين مع قائدهم ولجؤوا إلى البلدات المجاورة."
+            },
+            {
+                id: 2,
+                title: "معركة المدينة المنورة",
+                year: "1227هـ",
+                yearNum: 1227,
+                saudiLeaders: "المرابطون والأهالي من عسير، وأهل بيشة، والحجاز، وأهل الجنوب، وأهل نجد.",
+                enemyLeaders: "أحمد بن نابرت (قوات الدولة العثمانية المعتدية).",
+                location: "المدينة المنورة وأسوار قلعتها.",
+                hasVideo: false,
+                plan: "صمود المدافعين من كافة أنحاء الدولة داخل أسوار القلعة دفاعاً عن المدينة المنورة.",
+                events: "حاصرت القوات المعتدية المدينة حصاراً شديداً وسلطوا مدافعهم الضخمة، وحفروا سرداباً تحت سور قلعتها وملؤوه بالبارود وأشعلوا فيه النار حتى تهدم السور ودخلوها. استبسل السعوديون، لكن ضخامة القوات وشراستها دون مراعاة لحرمة أرض المدينة المنورة التي بها مسجد النبي ﷺ ومثواه أدت إلى استسلامهم بشرط تجنب الإضرار بالمدينة أو التعرض لأهاليها.",
+                result: "لم تلتزم القوات المعتدية العهد؛ فبعد دخولها بدأت ترمي بالمدافع لقتل المزيد، وسجل المؤرخ عثمان بن بشر بطولة وبسالة السعوديين."
+            },
+            {
+                id: 3,
+                title: "معركة تُربة",
+                year: "1228هـ",
+                yearNum: 1228,
+                saudiLeaders: "البطلة غالية البقمية وأهالي بلدة تُربة الأبطال.",
+                enemyLeaders: "طوسون.",
+                location: "بلدة تُربة.",
+                hasVideo: false,
+                plan: "إدارة المواجهة بحكمة وشجاعة عبر فتح المخازن وتوزيع الأسلحة وشحذ همم الأهالي المدافعين.",
+                events: "اتجهت الحملة المعتدية بقيادة طوسون إلى تربة وحاصرتها أربعة أيام مع رميها بالمدافع الضخمة، ولكن استبسال أهاليها منع تلك القوات من دخولها. ظهرت بطولة (غالية البقمية) التي أخفت مرض زوجها حاكم البلدة حتى لا تضعف همم الأهالي ووزعت السلاح.",
+                result: "انتصار كبير للسعوديين في تربة على القوات المعتدية الضخمة ودحرهم."
+            },
+            {
+                id: 4,
+                title: "معركة الطائف",
+                year: "1228هـ",
+                yearNum: 1228,
+                saudiLeaders: "عثمان المضايفي (أحد رجالات الدولة السعودية الأولى).",
+                enemyLeaders: "القوات المعتدية ويساندها الشريف غالب.",
+                location: "قصر بسل شرق الطائف.",
+                hasVideo: false,
+                plan: "التحصن في قصر بسل شرق الطائف ومواجهة القوات المحاصرة.",
+                events: "حاصرت القوات المعتدية في عام 1228هـ ويساندها الشريف غالب قصر بسل شرق الطائف وفيه القوات السعودية بقيادة عثمان المضايفي، ودار قتال حتى تمكن المعتدون من دخول القصر.",
+                result: "هزيمة القوات السعودية ثم القبض على عثمان المضايفي وقتله شهيداً رحمه الله."
+            },
+            {
+                id: 5,
+                title: "معركة القنفذة",
+                year: "1229هـ",
+                yearNum: 1229,
+                saudiLeaders: "القوات السعودية المرابطة في ساحل تهامة.",
+                enemyLeaders: "الحملة العثمانية المعتدية.",
+                location: "القنفذة على ساحل البحر الأحمر.",
+                hasVideo: false,
+                plan: "مواجهة الحملة المعتدية براً وبحراً لمنع تمركزها على الساحل.",
+                events: "واجه السعوديون قوات المعتدين براً وبحراً في عام 1229هـ وتمكنوا من صدها بشجاعة وقتال شديد.",
+                result: "أحرز السعوديون نصراً كبيراً، وفر المقاتلون المعتدون إلى سفنهم تاركين وراءهم مدافعهم ومؤنهم من شدة القتال."
+            },
+            {
+                id: 6,
+                title: "معركة حصن بخروش",
+                year: "1230هـ",
+                yearNum: 1230,
+                saudiLeaders: "بخروش بن علاس (أحد رجالات الدولة السعودية الأولى) والمواطنون السعوديون.",
+                enemyLeaders: "القوات العثمانية المعتدية.",
+                location: "حصن بخروش بن علاس.",
+                hasVideo: false,
+                plan: "الدفاع الباسل من داخل الحصن والتصدي المباشر للحشود المعتدية.",
+                events: "حاصرت القوات المعتدية حصن بخروش بن علاس في عام 1230هـ بأعداد ضخمة، فواجههم بخروش ورجاله بكل استبسال وأحدثوا فيهم خسائر فادحة.",
+                result: "هزيمة القوات المعتدية وقتل أكثر من ألف من مقاتليها. ولشدة الخسائر، واصلت القوات مطاردة بخروش حتى تمكنت من القبض عليه وقتله شهيداً رحمه الله."
+            },
+            {
+                id: 7,
+                title: "معركة طَبَب بعسير",
+                year: "1230هـ",
+                yearNum: 1230,
+                saudiLeaders: "طامي بن شعيب ورجاله في عسير.",
+                enemyLeaders: "القوات العثمانية المعتدية.",
+                location: "بلدة طَبَب (شمال غربي مدينة أبها - مركز الدولة السعودية الأولى في عسير).",
+                hasVideo: false,
+                plan: "التصدي العسكري الميداني في المناطق الجبلية لحماية مركز الدولة في عسير.",
+                events: "تمكن طامي بن شعيب ورجاله في عسير من مواجهة القوات المعتدية للدفاع عن دولتهم وأراضيهم وألحقوا بهم خسائر كثيرة.",
+                result: "استطاعت القوات العثمانية القبض على طامي وإرساله إلى مصر حيث قُتل هناك شهيداً رحمه الله."
+            },
+            {
+                id: 8,
+                title: "معركة الرس (الأولى)",
+                year: "1230هـ",
+                yearNum: 1230,
+                saudiLeaders: "الإمام عبد الله بن سعود وأهالي الرس بالقصيم.",
+                enemyLeaders: "طوسون.",
+                location: "مدينة الرس بالقصيم.",
+                hasVideo: false,
+                plan: "الدفاع المستميت أمام الحملة الزاحفة نحو الدرعية لتعطيل تقدمها واستنزافها.",
+                events: "سارت الحملة بقيادة طوسون عام 1230هـ من المدينة باتجاه الدرعية لإنهاء الدولة، فواجهت مقاومة شديدة عند حصارها مدينة الرس، حيث استبسل السعوديون بما لديهم من إمكانات لا تقارن بإمكانات الأمم التي جلبتها الحملة.",
+                result: "نتيجة لقوة الدفاع وبسالة السعوديين، وافق طوسون على مصالحة الإمام عبد الله بن سعود ورجع إلى مصر."
+            },
+            {
+                id: 9,
+                title: "حصار الرس",
+                year: "1232هـ",
+                yearNum: 1232,
+                saudiLeaders: "أهالي الرس، والشيخ قرناس بن عبد الرحمن بن قرناس (تولى القيادة بعد إصابة أمير الرس).",
+                enemyLeaders: "إبراهيم باشا.",
+                location: "مدينة الرس بالقصيم وأسوارها.",
+                hasVideo: false,
+                plan: "إحباط التسلل عبر الأنفاق تحت الأسوار وإشعال البارود فيها والمقاومة الشعبية الصلبة.",
+                events: "وصلت الحملة المعتدية بقيادة إبراهيم باشا عام 1232هـ في طريقها لتدمير الدرعية، فواجهت دفاعاً باسلاً من أهالي الرس كبدهم خسائر كبيرة. حاول إبراهيم باشا دخول المدينة عبر حفر نفق تحت سورها، فقام الشيخ قرناس ورجاله بإفشال المحاولة بإشعال البارود في النفق.",
+                result: "لم تتمكن القوات العثمانية المعتدية من دخول الرس؛ وهو ما اضطر العثمانيين إلى اللجوء للمصالحة."
+            },
+            {
+                id: 10,
+                title: "معركة النار",
+                year: "1233هـ",
+                yearNum: 1233,
+                saudiLeaders: "قوات الدولة السعودية الأولى المدافعة عن العاصمة.",
+                enemyLeaders: "إبراهيم باشا (بأعداد ضخمة وعتاد غير مسبوق).",
+                location: "نخل (سَمْحَة) في وادي حنيفة أثناء حصار الدرعية.",
+                hasVideo: false,
+                plan: "المقاومة البطولية والاستبسال الليلي في بساتين وادي حنيفة لصد الهجوم على العاصمة.",
+                events: "دارت في الليل معركة طاحنة في نخل سمحة وسط وادي حنيفة بين الجانبين، استبسل فيها السعوديون مع فارق العدة والعتاد العسكري الضخم.",
+                result: "صمود سعودي تاريخي أذهل المؤرخين؛ حيث وصف المؤرخ عثمان بن بشر المعركة بقوله: «واشتعلت النار في الأرض والسماء من كثرة الرمي بالقنابل والمدافع واشتعال النار في النخيل»."
+            }
+        ];
+
+        let currentSlideIndex = 0;
+
+        // Custom in-page Alert function (No alert() used)
+        function showAlert(msg, icon = 'ℹ️') {
+            const el = document.getElementById('custom-alert');
+            document.getElementById('alert-text').textContent = msg;
+            document.getElementById('alert-icon').textContent = icon;
+            el.classList.remove('hidden');
+            setTimeout(() => {
+                el.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Tab Switching logic
+        function switchTab(tabKey) {
+            const tabs = ['slides', 'dashboard', 'worksheet', 'challenge'];
+            tabs.forEach(t => {
+                const btn = document.getElementById('tab-' + t);
+                const sec = document.getElementById('section-' + t);
+                if (t === tabKey) {
+                    btn.classList.add('active');
+                    sec.classList.remove('hidden');
+                } else {
+                    btn.classList.remove('active');
+                    sec.classList.add('hidden');
+                }
+            });
+
+            if (tabKey === 'challenge') {
+                resetChallengeTimer();
+            } else {
+                clearInterval(challengeTimerInterval);
+            }
+
+            if (tabKey === 'dashboard') {
+                renderDashboard();
+            }
+        }
+
+        // Render Current Slide
+        function renderSlide(index) {
+            const b = battlesData[index];
+            document.getElementById('slide-number').textContent = `شريحة ${index + 1} من ${battlesData.length}`;
+            document.getElementById('slide-year-badge').textContent = b.year;
+
+            let videoHtml = '';
+            if (b.hasVideo) {
+                videoHtml = `
+                    <div class="mt-6 bg-stone-900 p-4 rounded-xl text-amber-50">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-bold text-amber-400 flex items-center gap-2">
+                                <span>🎥</span> مقطع مرئي توضيحي عن المعركة
+                            </span>
+                            <span class="text-xs text-stone-400">يمكن تعديل الرابط مباشرة في الكود</span>
+                        </div>
+                        <div class="video-container shadow-inner">
+                            <iframe src="${b.videoUrl}" title="${b.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                `;
+            }
+
+            const html = `
+                <div class="space-y-6">
+                    <div class="border-b border-stone-200 pb-3 flex flex-wrap justify-between items-center gap-2">
+                        <h3 class="text-2xl md:text-3xl font-black text-amber-900 flex items-center gap-2">
+                            <span>⚔️</span> ${b.title}
+                        </h3>
+                        <span class="bg-amber-100 text-amber-900 border border-amber-300 font-bold px-3 py-1 rounded-full text-sm">عام ${b.year}</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                            <h4 class="font-bold text-stone-800 text-sm mb-1 text-emerald-800 flex items-center gap-1.5">
+                                <span>🇸🇦</span> قيادة القوات السعودية:
+                            </h4>
+                            <p class="text-sm text-stone-700 leading-relaxed">${b.saudiLeaders}</p>
+                        </div>
+                        <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                            <h4 class="font-bold text-stone-800 text-sm mb-1 text-rose-800 flex items-center gap-1.5">
+                                <span>🛑</span> القوات المعتدية:
+                            </h4>
+                            <p class="text-sm text-stone-700 leading-relaxed">${b.enemyLeaders}</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200">
+                        <h4 class="font-bold text-amber-900 text-sm mb-1 flex items-center gap-1.5">
+                            <span>📍</span> موقع المعركة:
+                        </h4>
+                        <p class="text-sm text-stone-700">${b.location}</p>
+                    </div>
+
+                    <div class="space-y-3 bg-white p-5 rounded-xl border border-stone-200 shadow-sm">
+                        <h4 class="font-bold text-stone-900 text-base flex items-center gap-2 border-b pb-2">
+                            <span>📜</span> مجريات المعركة وخطة الدفاع:
+                        </h4>
+                        <div>
+                            <p class="text-xs font-bold text-stone-500 mb-1">الخطة الحربية:</p>
+                            <p class="text-sm text-stone-700 leading-relaxed">${b.plan}</p>
+                        </div>
+                        <div class="pt-2">
+                            <p class="text-xs font-bold text-stone-500 mb-1">أبرز الأحداث:</p>
+                            <p class="text-sm text-stone-700 leading-relaxed">${b.events}</p>
+                        </div>
+                        <div class="bg-emerald-50 border-r-4 border-emerald-600 p-3 rounded-l-lg mt-3">
+                            <p class="text-xs font-bold text-emerald-900 mb-0.5">النتيجة والأثر التاريخي:</p>
+                            <p class="text-sm text-emerald-950 font-medium leading-relaxed">${b.result}</p>
+                        </div>
+                    </div>
+
+                    ${videoHtml}
+                </div>
+            `;
+
+            document.getElementById('slide-content').innerHTML = html;
+            renderSlideDots();
+        }
+
+        function renderSlideDots() {
+            const container = document.getElementById('slides-dots');
+            container.innerHTML = '';
+            battlesData.forEach((b, idx) => {
+                const btn = document.createElement('button');
+                btn.className = `px-3 py-1 rounded-lg text-xs font-bold border transition duration-150 ${idx === currentSlideIndex ? 'bg-amber-800 text-white border-amber-900' : 'bg-white text-stone-700 border-stone-300 hover:bg-stone-100'}`;
+                btn.textContent = `${idx + 1}. ${b.title}`;
+                btn.onclick = () => {
+                    currentSlideIndex = idx;
+                    renderSlide(currentSlideIndex);
+                };
+                container.appendChild(btn);
+            });
+        }
+
+        function nextSlide() {
+            if (currentSlideIndex < battlesData.length - 1) {
+                currentSlideIndex++;
+                renderSlide(currentSlideIndex);
+            } else {
+                showAlert('أنت في الشريحة الأخيرة من العرض', 'ℹ️');
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                renderSlide(currentSlideIndex);
+            } else {
+                showAlert('أنت في الشريحة الأولى من العرض', 'ℹ️');
+            }
+        }
+
+        let battlesChartInstance = null;
+
+        function renderDashboard() {
+            if (!battlesChartInstance) {
+                const ctx = document.getElementById('battlesChart').getContext('2d');
+                // Count battles per year
+                const yearsCounts = {
+                    '1226': 1,
+                    '1227': 1,
+                    '1228': 2,
+                    '1229': 1,
+                    '1230': 3,
+                    '1232': 1,
+                    '1233': 1
+                };
+
+                battlesChartInstance = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: Object.keys(yearsCounts).map(y => y + 'هـ'),
+                        datasets: [{
+                            label: 'عدد المعارك الموثقة في المنهج',
+                            data: Object.values(yearsCounts),
+                            backgroundColor: '#9A3412',
+                            borderRadius: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                labels: { font: { family: 'Tajawal', size: 12, weight: 'bold' } }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: { stepSize: 1, font: { family: 'Tajawal' } }
+                            },
+                            x: {
+                                ticks: { font: { family: 'Tajawal', weight: 'bold' } }
+                            }
+                        }
+                    }
+                });
+            }
+
+            filterBattles();
+        }
+
+        function filterBattles() {
+            const selectedYear = document.getElementById('year-filter').value;
+            const grid = document.getElementById('battles-grid');
+            grid.innerHTML = '';
+
+            const filtered = selectedYear === 'all' 
+                ? battlesData 
+                : battlesData.filter(b => b.yearNum.toString() === selectedYear);
+
+            filtered.forEach(b => {
+                const card = document.createElement('div');
+                card.className = "bg-stone-50 border border-stone-200 hover:border-amber-500 p-4 rounded-xl shadow-sm transition hover:shadow-md flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-amber-900 text-base">${b.title}</h4>
+                            <span class="bg-amber-200/60 text-amber-900 text-xs px-2 py-0.5 rounded font-bold">${b.year}</span>
+                        </div>
+                        <p class="text-xs text-stone-600 mb-2"><strong>الموقع:</strong> ${b.location}</p>
+                        <p class="text-xs text-stone-600 line-clamp-2"><strong>النتيجة:</strong> ${b.result}</p>
+                    </div>
+                    <button onclick="currentSlideIndex = ${b.id - 1}; switchTab('slides'); renderSlide(currentSlideIndex);" class="mt-3 text-xs bg-amber-800 hover:bg-amber-900 text-white font-bold py-1.5 px-3 rounded-lg self-start transition">
+                        عرض الشريحة ⬅️
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Comprehensive Question Banks extracted strictly from textbook
+        const worksheetQuestionSets = [
+            // Model 1
+            {
+                modelNumber: 1,
+                q1: {
+                    type: "mcq",
+                    prompt: "السؤال الأول: اختر الإجابة الصحيحة:\nبطلة سعودية اشتهرت بالشجاعة والرأي، أخفت خبر مرض زوجها ووزعت الأسلحة على الأهالي للدفاع عن بلدة تُربة عام 1228هـ، هي:",
+                    options: [
+                        { text: "نورة بنت عبد الرحمن", correct: false },
+                        { text: "غالية البقمية", correct: true },
+                        { text: "موضي البسام", correct: false },
+                        { text: "الجوهرة بنت عبد الله", correct: false }
+                    ],
+                    correctAnswer: "غالية البقمية"
+                },
+                q2: {
+                    type: "fill",
+                    prompt: "السؤال الثاني: أكمل الفراغ بالكلمة المناسبة:\nفي معركة القنفذة عام 1229هـ، أحرز السعوديون نصراً كبيراً وأجبروا القوات المعتدية على الفرار إلى (...................) تاركين وراءهم مدافعهم ومؤنهم من شدة القتال.",
+                    correctKeywords: ["سفنهم", "السفن", "سفنهم الشراعية"],
+                    displayAnswer: "سفنهم"
+                },
+                q3: {
+                    type: "tf",
+                    prompt: "السؤال الثالث: ضع علامة (صح) أو (خطأ):\nفي معركة وادي الصفراء عام 1226هـ، تمكنت القوات السعودية بقيادة الأمير عبد الله بن سعود من إلحاق الهزيمة بقوات طوسون.",
+                    correct: true,
+                    displayAnswer: "صح (✔️)"
+                }
+            },
+            // Model 2
+            {
+                modelNumber: 2,
+                q1: {
+                    type: "mcq",
+                    prompt: "السؤال الأول: اختر الإجابة الصحيحة:\nالبطل السعودي الذي تولى قيادة الدفاع في حصار الرس عام 1232هـ بعد إصابة أميرها وأفشل محاولة العدو لدخول المدينة بحفر نفق هو:",
+                    options: [
+                        { text: "عثمان المضايفي", correct: false },
+                        { text: "طامي بن شعيب", correct: false },
+                        { text: "الشيخ قرناس بن عبد الرحمن بن قرناس", correct: true },
+                        { text: "بخروش بن علاس", correct: false }
+                    ],
+                    correctAnswer: "الشيخ قرناس بن عبد الرحمن بن قرناس"
+                },
+                q2: {
+                    type: "fill",
+                    prompt: "السؤال الثاني: أكمل الفراغ بالكلمة المناسبة:\nفي معركة حصن بخروش عام 1230هـ، تمكن بخروش والمواطنون السعوديون من إلحاق الهزيمة بالقوات المعتدية وقتل أكثر من (...................) من مقاتليها.",
+                    correctKeywords: ["ألف", "1000", "الف"],
+                    displayAnswer: "ألف (1000 مقاتل)"
+                },
+                q3: {
+                    type: "tf",
+                    prompt: "السؤال الثالث: ضع علامة (صح) أو (خطأ):\nوقعت معركة النار عام 1233هـ أثناء حصار الدرعية في نخل (سَمْحَة) في وادي حنيفة خلال الليل.",
+                    correct: true,
+                    displayAnswer: "صح (✔️)"
+                }
+            },
+            // Model 3
+            {
+                modelNumber: 3,
+                q1: {
+                    type: "mcq",
+                    prompt: "السؤال الأول: اختر الإجابة الصحيحة:\nالقائد السعودي الذي قاد المواجهة في بلدة طَبَب بعسير عام 1230هـ وألحق خسائر كثيرة بالمعتدين قبل القبض عليه وإرساله لمصر واستشهاده هو:",
+                    options: [
+                        { text: "طامي بن شعيب", correct: true },
+                        { text: "مسعود بن مضيان", correct: false },
+                        { text: "حباب المطيري", correct: false },
+                        { text: "فيصل بن سعود", correct: false }
+                    ],
+                    correctAnswer: "طامي بن شعيب"
+                },
+                q2: {
+                    type: "fill",
+                    prompt: "السؤال الثاني: أكمل الفراغ بالكلمة المناسبة:\nفي معركة المدينة المنورة عام 1227هـ، حفرت القوات المعتدية بقيادة أحمد بن نابرت سرداباً تحت سور القلعة وملؤوه بـ (...................) وأشعلوا فيه النار حتى تهدم السور.",
+                    correctKeywords: ["البارود", "بارود"],
+                    displayAnswer: "البارود"
+                },
+                q3: {
+                    type: "tf",
+                    prompt: "السؤال الثالث: ضع علامة (صح) أو (خطأ):\nفي معركة الطائف عام 1228هـ، تحصنت القوات السعودية بقيادة عثمان المضايفي في قصر بسل شرق الطائف.",
+                    correct: true,
+                    displayAnswer: "صح (✔️)"
+                }
+            }
+        ];
+
+        let currentWorksheetIndex = 0;
+
+        function renderWorksheetQuestions() {
+            const set = worksheetQuestionSets[currentWorksheetIndex];
+            document.getElementById('worksheet-set-badge').textContent = `النموذج (${set.modelNumber})`;
+            const container = document.getElementById('worksheet-questions-container');
+            
+            container.innerHTML = `
+                <!-- Question 1: MCQ -->
+                <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 space-y-3">
+                    <p class="font-bold text-stone-800 text-sm whitespace-pre-line leading-relaxed">${set.q1.prompt}</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2">
+                        ${set.q1.options.map((opt, i) => `
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-stone-300 bg-white hover:bg-amber-50 cursor-pointer text-sm">
+                                <input type="radio" name="ws_q1" value="${opt.text}" class="text-amber-700 focus:ring-amber-600" required>
+                                <span>${opt.text}</span>
+                            </label>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Question 2: Fill in the blank -->
+                <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 space-y-3">
+                    <p class="font-bold text-stone-800 text-sm whitespace-pre-line leading-relaxed">${set.q2.prompt}</p>
+                    <div class="pt-2">
+                        <input type="text" id="ws_q2_input" placeholder="اكتب إجابتك هنا..." class="w-full sm:w-80 p-2.5 text-sm rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-600 focus:border-amber-600 outline-none" required>
+                    </div>
+                </div>
+
+                <!-- Question 3: True / False -->
+                <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 space-y-3">
+                    <p class="font-bold text-stone-800 text-sm whitespace-pre-line leading-relaxed">${set.q3.prompt}</p>
+                    <div class="flex gap-4 pt-2">
+                        <label class="flex items-center gap-2 px-4 py-2 rounded-lg border border-stone-300 bg-white hover:bg-emerald-50 cursor-pointer text-sm font-bold">
+                            <input type="radio" name="ws_q3" value="true" class="text-emerald-700" required>
+                            <span>صح (✔️)</span>
+                        </label>
+                        <label class="flex items-center gap-2 px-4 py-2 rounded-lg border border-stone-300 bg-white hover:bg-rose-50 cursor-pointer text-sm font-bold">
+                            <input type="radio" name="ws_q3" value="false" class="text-rose-700" required>
+                            <span>خطأ (❌)</span>
+                        </label>
+                    </div>
+                </div>
+            `;
+
+            // Prepare Answer Key
+            const keyContainer = document.getElementById('answer-key-content');
+            keyContainer.innerHTML = `
+                <p><strong>السؤال الأول:</strong> ${set.q1.correctAnswer}</p>
+                <p><strong>السؤال الثاني:</strong> ${set.q2.displayAnswer}</p>
+                <p><strong>السؤال الثالث:</strong> ${set.q3.displayAnswer}</p>
+            `;
+
+            document.getElementById('worksheet-result').classList.add('hidden');
+        }
+
+        function generateNewWorksheet() {
+            currentWorksheetIndex = (currentWorksheetIndex + 1) % worksheetQuestionSets.length;
+            renderWorksheetQuestions();
+            showAlert(`تم توليد النموذج رقم (${currentWorksheetIndex + 1}) بنجاح!`, '🔄');
+        }
+
+        function toggleAnswerKey() {
+            const el = document.getElementById('teacher-answer-key');
+            el.classList.toggle('hidden');
+        }
+
+        function evaluateWorksheet(event) {
+            event.preventDefault();
+            const set = worksheetQuestionSets[currentWorksheetIndex];
+            let score = 0;
+
+            // Q1
+            const selectedQ1 = document.querySelector('input[name="ws_q1"]:checked');
+            if (selectedQ1 && selectedQ1.value === set.q1.correctAnswer) {
+                score++;
+            }
+
+            // Q2
+            const q2Val = document.getElementById('ws_q2_input').value.trim();
+            const isQ2Correct = set.q2.correctKeywords.some(kw => q2Val.includes(kw));
+            if (isQ2Correct) {
+                score++;
+            }
+
+            // Q3
+            const selectedQ3 = document.querySelector('input[name="ws_q3"]:checked');
+            if (selectedQ3 && (selectedQ3.value === "true") === set.q3.correct) {
+                score++;
+            }
+
+            const resultBox = document.getElementById('worksheet-result');
+            resultBox.classList.remove('hidden');
+            if (score === 3) {
+                resultBox.className = "p-4 rounded-xl border font-bold text-sm bg-emerald-100 text-emerald-900 border-emerald-300";
+                resultBox.innerHTML = `🎉 ممتاز جداً! حصلت على الدرجة الكاملة: 3 من 3. إجاباتك دقيقة ومطابقة تماماً لكتاب التاريخ.`;
+            } else {
+                resultBox.className = "p-4 rounded-xl border font-bold text-sm bg-amber-100 text-amber-900 border-amber-300";
+                resultBox.innerHTML = `درجتك هي: ${score} من 3. يمكنك مراجعة الشرائح وتكرار المحاولة أو الاطلاع على مفتاح الإجابة.`;
+            }
+        }
+
+        // Final Challenge Multi-Round Question Bank
+        const challengeRounds = [
+            {
+                mcq: {
+                    title: "سؤال الاختيار من متعدد:",
+                    question: "أين وقعت المعركة التي سُميت بـ 'معركة النار' عام 1233هـ واشتعلت فيها الأرض والسماء من كثرة الرمي بالقنابل والمدافع؟",
+                    options: [
+                        "وادي الصفراء بالقرب من المدينة",
+                        "قصر بسل شرق الطائف",
+                        "نخل (سَمْحَة) في وادي حنيفة",
+                        "حصن بخروش بعسير"
+                    ],
+                    correctIndex: 2
+                },
+                matching: [
+                    { hero: "غالية البقمية", target: "بلدة تُربة (1228هـ)" },
+                    { hero: "طامي بن شعيب", target: "بلدة طَبَب بعسير (1230هـ)" },
+                    { hero: "الشيخ قرناس", target: "حصار الرس (1232هـ)" },
+                    { hero: "عثمان المضايفي", target: "قصر بسل بالطائف (1228هـ)" }
+                ],
+                outcomes: [
+                    {
+                        battle: "معركة وادي الصفراء (1226هـ)",
+                        options: ["حصد القوات في قمم الجبال وفرار المعتدين", "إشعال البارود في النفق وإفشال الدخول", "الفرار إلى السفن وترك المدافع والمؤن"],
+                        correct: "حصد القوات في قمم الجبال وفرار المعتدين"
+                    },
+                    {
+                        battle: "معركة القنفذة (1229هـ)",
+                        options: ["حصد القوات في قمم الجبال وفرار المعتدين", "إشعال البارود في النفق وإفشال الدخول", "الفرار إلى السفن وترك المدافع والمؤن"],
+                        correct: "الفرار إلى السفن وترك المدافع والمؤن"
+                    },
+                    {
+                        battle: "حصار الرس (1232هـ)",
+                        options: ["حصد القوات في قمم الجبال وفرار المعتدين", "إشعال البارود في النفق وإفشال الدخول", "الفرار إلى السفن وترك المدافع والمؤن"],
+                        correct: "إشعال البارود في النفق وإفشال الدخول"
+                    }
+                ]
+            },
+            {
+                mcq: {
+                    title: "سؤال الاختيار من متعدد:",
+                    question: "في أي معركة حفرت القوات السعودية خندقاً في مضيق وادي جديدة لصد هجوم طوسون عام 1226هـ؟",
+                    options: [
+                        "معركة وادي الصفراء",
+                        "معركة تُربة",
+                        "معركة المدينة المنورة",
+                        "معركة القنفذة"
+                    ],
+                    correctIndex: 0
+                },
+                matching: [
+                    { hero: "الأمير عبد الله بن سعود", target: "وادي الصفراء (1226هـ)" },
+                    { hero: "بخروش بن علاس", target: "حصن بخروش (1230هـ)" },
+                    { hero: "أهالي الرس والأمير", target: "معركة الرس الأولى (1230هـ)" },
+                    { hero: "مرابطو بيشة وعسير ونجد", target: "أسوار المدينة المنورة (1227هـ)" }
+                ],
+                outcomes: [
+                    {
+                        battle: "معركة حصن بخروش (1230هـ)",
+                        options: ["قتل أكثر من ألف من المعتدين وهزيمتهم", "الفرار إلى السفن البحرية", "تفجير السرداب تحت سور القلعة"],
+                        correct: "قتل أكثر من ألف من المعتدين وهزيمتهم"
+                    },
+                    {
+                        battle: "معركة المدينة المنورة (1227هـ)",
+                        options: ["قتل أكثر من ألف من المعتدين وهزيمتهم", "الفرار إلى السفن البحرية", "تفجير السرداب تحت سور القلعة"],
+                        correct: "تفجير السرداب تحت سور القلعة"
+                    },
+                    {
+                        battle: "معركة تُربة (1228هـ)",
+                        options: ["فتح المخازن وتوزيع السلاح وهزيمة المعتدين", "مصالحة الإمام والتراجع لمصر", "إشعال النفق بالبارود"],
+                        correct: "فتح المخازن وتوزيع السلاح وهزيمة المعتدين"
+                    }
+                ]
+            }
+        ];
+
+        let currentChallengeRound = 0;
+        let challengeTimerInterval = null;
+        let timeLeft = 30;
+        let selectedHeroBtn = null;
+        let matchedPairs = 0;
+        let userSelectedMcq = null;
+
+        function resetChallengeTimer() {
+            clearInterval(challengeTimerInterval);
+            timeLeft = 30;
+            const timerDisplay = document.getElementById('challenge-timer');
+            timerDisplay.textContent = timeLeft;
+            timerDisplay.classList.remove('text-rose-500', 'animate-pulse');
+            timerDisplay.classList.add('text-amber-400');
+            document.getElementById('submit-challenge-btn').disabled = false;
+
+            challengeTimerInterval = setInterval(() => {
+                timeLeft--;
+                timerDisplay.textContent = timeLeft;
+
+                if (timeLeft <= 10) {
+                    timerDisplay.classList.remove('text-amber-400');
+                    timerDisplay.classList.add('text-rose-500', 'animate-pulse');
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(challengeTimerInterval);
+                    timerDisplay.textContent = '0';
+                    timerDisplay.classList.remove('animate-pulse');
+                    showAlert('⏰ انتهت الـ 30 ثانية المحددة للجولة!', '⚠️');
+                    document.getElementById('submit-challenge-btn').disabled = true;
+                    document.getElementById('challenge-status-banner').textContent = '⚠️ انتهى الوقت! يمكنك النقر على "إعادة الجولة" أو "جولة جديدة".';
+                }
+            }, 1000);
+        }
+
+        function renderChallenge() {
+            const round = challengeRounds[currentChallengeRound];
+            userSelectedMcq = null;
+            selectedHeroBtn = null;
+            matchedPairs = 0;
+            document.getElementById('challenge-score').textContent = `0 / 3`;
+            document.getElementById('challenge-status-banner').textContent = '';
+
+            // 1. Render MCQ
+            document.getElementById('challenge-mcq-title').textContent = round.mcq.title;
+            document.getElementById('challenge-mcq-question').textContent = round.mcq.question;
+            const mcqContainer = document.getElementById('challenge-mcq-options');
+            mcqContainer.innerHTML = '';
+            round.mcq.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'p-3 text-right rounded-xl border border-stone-300 bg-stone-50 hover:bg-amber-100 text-stone-800 text-sm font-semibold transition mcq-opt-btn';
+                btn.textContent = opt;
+                btn.onclick = () => {
+                    document.querySelectorAll('.mcq-opt-btn').forEach(b => b.classList.remove('border-amber-800', 'bg-amber-200', 'font-bold'));
+                    btn.classList.add('border-amber-800', 'bg-amber-200', 'font-bold');
+                    userSelectedMcq = idx;
+                };
+                mcqContainer.appendChild(btn);
+            });
+
+            // 2. Render Matching
+            const heroesCol = document.getElementById('matching-heroes-col');
+            const targetsCol = document.getElementById('matching-targets-col');
+            heroesCol.innerHTML = '';
+            targetsCol.innerHTML = '';
+
+            // Shuffled targets
+            const shuffledTargets = [...round.matching].sort(() => Math.random() - 0.5);
+
+            round.matching.forEach(item => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-full p-2.5 rounded-lg border-2 border-stone-300 bg-white text-stone-800 text-sm font-bold matching-item transition text-right';
+                btn.textContent = `👤 ${item.hero}`;
+                btn.dataset.hero = item.hero;
+                btn.onclick = () => selectHero(btn);
+                heroesCol.appendChild(btn);
+            });
+
+            shuffledTargets.forEach(item => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-full p-2.5 rounded-lg border-2 border-stone-300 bg-white text-stone-800 text-sm font-bold matching-item transition text-right';
+                btn.textContent = `📍 ${item.target}`;
+                btn.dataset.target = item.target;
+                btn.onclick = () => selectTarget(btn);
+                targetsCol.appendChild(btn);
+            });
+
+            // 3. Render Outcomes
+            const outcomesContainer = document.getElementById('challenge-outcomes-container');
+            outcomesContainer.innerHTML = '';
+            round.outcomes.forEach((item, idx) => {
+                const row = document.createElement('div');
+                row.className = 'p-3 rounded-xl bg-stone-50 border border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3';
+                row.innerHTML = `
+                    <span class="font-bold text-stone-800 text-sm">⚔️ ${item.battle}:</span>
+                    <select id="outcome-select-${idx}" class="p-2 rounded-lg border border-stone-300 bg-white text-xs font-bold text-stone-700">
+                        <option value="">-- اختر النتيجة المناسبة --</option>
+                        ${item.options.map(opt => `<option value="${opt}">${opt}</option>`).join('')}
+                    </select>
+                `;
+                outcomesContainer.appendChild(row);
+            });
+
+            resetChallengeTimer();
+        }
+
+        function selectHero(btn) {
+            if (btn.classList.contains('matched')) return;
+            document.querySelectorAll('#matching-heroes-col button').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            selectedHeroBtn = btn;
+        }
+
+        function selectTarget(targetBtn) {
+            if (!selectedHeroBtn || targetBtn.classList.contains('matched')) return;
+            const round = challengeRounds[currentChallengeRound];
+            const heroName = selectedHeroBtn.dataset.hero;
+            const targetName = targetBtn.dataset.target;
+
+            // Check match
+            const pair = round.matching.find(m => m.hero === heroName);
+            if (pair && pair.target === targetName) {
+                selectedHeroBtn.classList.remove('selected');
+                selectedHeroBtn.classList.add('matched');
+                targetBtn.classList.add('matched');
+                matchedPairs++;
+                showAlert(`رائع! وصل صحيح لـ: ${heroName}`, '✅');
+                selectedHeroBtn = null;
+            } else {
+                showAlert('محاولة غير صحيحة، حاول مجدداً', '❌');
+                selectedHeroBtn.classList.remove('selected');
+                selectedHeroBtn = null;
+            }
+        }
+
+        function submitChallengeAnswers() {
+            clearInterval(challengeTimerInterval);
+            const round = challengeRounds[currentChallengeRound];
+            let points = 0;
+
+            // 1. Check MCQ
+            if (userSelectedMcq === round.mcq.correctIndex) {
+                points++;
+            }
+
+            // 2. Check Matching (all pairs)
+            if (matchedPairs === round.matching.length) {
+                points++;
+            }
+
+            // 3. Check Outcomes
+            let outcomesCorrect = true;
+            round.outcomes.forEach((item, idx) => {
+                const selectEl = document.getElementById(`outcome-select-${idx}`);
+                if (!selectEl || selectEl.value !== item.correct) {
+                    outcomesCorrect = false;
+                }
+            });
+            if (outcomesCorrect) {
+                points++;
+            }
+
+            document.getElementById('challenge-score').textContent = `${points} / 3`;
+            const banner = document.getElementById('challenge-status-banner');
+
+            if (points === 3) {
+                banner.className = 'text-sm font-black text-emerald-600';
+                banner.textContent = '🏆 إنجاز مذهل! إجاباتك كاملة وصحيحة 100% خلال الوقت المحدد!';
+                showAlert('تهانينا! حققت الدرجة الكاملة في التحدي 🌟', '🏆');
+            } else {
+                banner.className = 'text-sm font-bold text-amber-700';
+                banner.textContent = `أحسنت! حققت ${points} من 3 نقاط. حاول كسر رقمك في الجولة القادمة.`;
+            }
+        }
+
+        function generateNewChallenge() {
+            currentChallengeRound = (currentChallengeRound + 1) % challengeRounds.length;
+            renderChallenge();
+            showAlert(`تم بدء جولة تحدي جديدة بأسئلة مختلفة! 🎯`, '🔄');
+        }
+
+        function resetCurrentRound() {
+            renderChallenge();
+            showAlert('تمت إعادة الجولة، انطلق الآن!', '⏱️');
+        }
+
+        // Global Application Initialization on Window Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderSlide(currentSlideIndex);
+            renderWorksheetQuestions();
+            renderChallenge();
+        });
+    </script>
+</body>
+</html>
